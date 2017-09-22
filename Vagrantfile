@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "provisioning/setup-git.sh"
   config.vm.provision :shell, :path => "provisioning/setup-java.sh"
   config.vm.provision :shell, :path => "provisioning/setup-maven.sh"
-  config.vm.provision :shell, :path => "provisioning/setup-nodejs.sh"
+  config.vm.provision :shell, :path => "provisioning/setup-nodejs.sh", privileged: false
   config.vm.provision :shell, :path => "provisioning/setup-rbenv.sh", privileged: false
   config.vm.provision :shell, :path => "provisioning/setup-ruby.sh", privileged: false
   config.vm.provision :shell, :path => "provisioning/clean.sh"
